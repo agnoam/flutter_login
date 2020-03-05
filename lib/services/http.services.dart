@@ -16,7 +16,7 @@ class HttpServices {
   }
 
   static Future<bool> login({ User user }) async {
-    String strJson = jsonEncode(user.toJSON());
+    // String strJson = jsonEncode(user.toJSON());
     http.Response res = await http.post('$serverURL/app/login', body: user.toJSON());
 
     if(res.statusCode == 200) {
